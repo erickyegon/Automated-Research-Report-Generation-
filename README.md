@@ -63,11 +63,11 @@ flowchart TD
 
 ---
 
+---
 ## 🎯 Objective
 To create a **fully automated, domain-agnostic research assistant** that can perform data retrieval, synthesis, and report generation while maintaining accuracy and interpretability via **human-in-the-loop validation**.
 
 ---
-
 ## ⚙️ Core Workflow
 
 1. **Start Node:** Accepts a topic or research prompt.  
@@ -163,5 +163,6 @@ Global Director of Performance, Evidence & Insights | AI & Data Science Leader
 ---
 
 © 2025 Erick Kiprotich Yegon | AI Systems Portfolio | All Rights Reserved.
+
 
 
