@@ -116,16 +116,82 @@ To create a **fully automated, domain-agnostic research assistant** that can per
 ## 🧩 Example Use Cases
 
 ### 🧬 Pharmaceutical Research
-- Automates **drug discovery documentation**, **trial summaries**, and **pipeline reports**.
+**Objective:** Accelerate drug discovery and regulatory compliance processes through automated research synthesis.
+
+**Key Applications:**
+- **Drug Discovery Documentation:** Automatically compile comprehensive literature reviews on molecular targets, mechanism of action studies, and preclinical efficacy data from PubMed, clinical trial databases, and pharmaceutical journals.
+- **Clinical Trial Summaries:** Generate structured summaries of ongoing and completed trials, including patient demographics, endpoints, adverse events, and statistical outcomes.
+- **Pipeline Reports:** Create periodic reports tracking drug candidates through development stages (preclinical, Phase I/II/III), monitoring competitive landscape and regulatory milestones.
+- **Safety & Pharmacovigilance:** Synthesize adverse event reports, drug interaction studies, and post-market surveillance data into actionable safety profiles.
+
+**Example Workflow:**
+1. User inputs: "Generate a comprehensive report on CRISPR-based gene therapies for sickle cell disease"
+2. System retrieves data from PubMed, ClinicalTrials.gov, FDA databases, and scientific journals
+3. Analyst agent structures information into: mechanism, clinical evidence, safety profile, regulatory status
+4. Human validation ensures medical accuracy
+5. Final report exported as PDF with citations and evidence tables
+
+---
 
 ### 💹 Financial Analytics
-- Generates **market risk profiles**, **financial summaries**, and **forecast reports**.
+**Objective:** Provide data-driven investment insights and risk assessments through multi-source financial analysis.
+
+**Key Applications:**
+- **Market Risk Profiles:** Aggregate macroeconomic indicators, sector performance metrics, volatility indices, and geopolitical events to assess portfolio risk exposure.
+- **Equity Research Reports:** Analyze company financials, earnings calls, SEC filings, analyst ratings, and news sentiment to generate buy/sell/hold recommendations.
+- **Economic Forecasts:** Synthesize central bank reports, inflation data, employment statistics, and leading indicators into forward-looking economic projections.
+- **ESG Analysis:** Compile environmental, social, and governance metrics from sustainability reports, third-party ratings, and regulatory disclosures.
+- **Competitor Analysis:** Compare financial performance, market positioning, and strategic initiatives across industry peers.
+
+**Example Workflow:**
+1. User inputs: "Analyze Tesla's Q4 2024 performance and generate investment recommendation"
+2. System retrieves SEC filings, earnings transcripts, analyst reports, stock price data, and industry news
+3. Answer generation synthesizes: revenue growth, profitability trends, competitive position, risks
+4. Validation ensures numerical accuracy and citation integrity
+5. Final report includes financial tables, charts, and actionable insights
+
+---
 
 ### 🎓 Academia
-- Produces **research papers**, **systematic reviews**, and **literature analyses**.
+**Objective:** Streamline academic research workflows through automated literature synthesis and analysis.
+
+**Key Applications:**
+- **Systematic Literature Reviews:** Conduct PRISMA-compliant systematic reviews by searching multiple academic databases (PubMed, IEEE, arXiv, Google Scholar), screening papers based on inclusion criteria, and synthesizing findings.
+- **Research Paper Drafting:** Generate structured academic papers with Introduction, Literature Review, Methodology, Results, Discussion, and Conclusion sections based on research data and domain knowledge.
+- **Meta-Analysis Support:** Aggregate quantitative results from multiple studies, identify effect sizes, assess publication bias, and generate forest plots.
+- **Grant Proposal Research:** Compile background literature, identify research gaps, and synthesize preliminary data to support funding applications.
+- **Citation Network Analysis:** Map research lineage, identify seminal papers, and track concept evolution across publications.
+
+**Example Workflow:**
+1. User inputs: "Conduct a systematic review on machine learning applications in climate modeling"
+2. System searches academic databases with Boolean queries
+3. Retrieval nodes collect 200+ relevant papers
+4. Analyst agent categorizes by: ML technique, climate domain, datasets used, performance metrics
+5. Human validates paper selection and categorization
+6. Report generation produces: PRISMA flowchart, summary tables, trend analysis, research gaps
+7. Final output exported as LaTeX manuscript with BibTeX references
+
+---
 
 ### 📰 Journalism
-- Enables **fact-checked, source-linked content generation** and **interview summaries**.
+**Objective:** Enable fact-based, investigative journalism through automated research and source verification.
+
+**Key Applications:**
+- **Investigative Research:** Cross-reference public records, court documents, corporate filings, and news archives to uncover stories and verify claims.
+- **Fact-Checking:** Validate statements from public figures by retrieving primary sources, statistical databases, and expert commentary.
+- **Interview Preparation:** Generate comprehensive background briefs on interview subjects, including biography, recent activities, public statements, and controversy timelines.
+- **Data Journalism:** Analyze government datasets, economic indicators, and social statistics to identify newsworthy trends and patterns.
+- **Source Attribution:** Maintain rigorous source tracking with hyperlinked citations to ensure journalistic integrity and reader verification.
+- **Breaking News Summaries:** Rapidly synthesize developing stories from multiple wire services, social media, and official statements.
+
+**Example Workflow:**
+1. User inputs: "Prepare an investigative brief on recent changes in state education funding"
+2. System retrieves: state budget documents, legislative records, education department reports, news coverage
+3. Question generation creates sub-queries: funding trends, policy changes, impact analysis, stakeholder positions
+4. Answer synthesis compiles: historical context, current developments, expert opinions, affected communities
+5. Human journalist reviews for balance, newsworthiness, and editorial standards
+6. Final brief includes: timeline, data visualizations, source links, suggested interview subjects
+7. Export as markdown for CMS integration or PDF for print layout
 
 ---
 
