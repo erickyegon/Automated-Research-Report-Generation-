@@ -205,10 +205,46 @@ To create a **fully automated, domain-agnostic research assistant** that can per
 ---
 
 ## 📦 Deliverables
-- `ARRGS_Updated_Architecture.excalidraw` — full architecture diagram  
-- `ARRGS_Detailed_Project_Description.md` — this README documentation  
-- **Deployment-ready FastAPI backend**  
-- **Sample generated reports (PDF, DOCX, MD)**
+
+The **Automated Research and Report Generation System (ARRGS)** project produces a complete end-to-end, multi-agent AI system — from architecture design to deployable code and sample reports.  
+Deliverables include both technical components and learning outcomes as described during architecture walkthroughs and the project setup session.
+
+| Category | Deliverable | Description |
+|-----------|--------------|-------------|
+| **1. Architecture & Documentation** | `ARRGS_Updated_Architecture.excalidraw` | Full visual workflow diagram illustrating the multi-agent, subgraph-based LangGraph orchestration — covering Analyst Agent, Human-in-the-Loop, Research Subgraph, Question Generation, Retrieval Layer, Validation, Writing, and Finalization. |
+|  | `ARRGS_Detailed_Project_Description.md` | Comprehensive README documentation detailing objectives, architecture, components, workflow, use cases, and LLMOps integration. |
+|  | `project3.pdf` | Lecture and setup guide outlining the architecture, environment setup (`uv init`, `pip install -e .`), and project flow (Research → Analysis → Generation). |
+| **2. Core Application Code** | `main.py` | Entry point script orchestrating the overall ARRGS pipeline and managing the LangGraph-based workflow. |
+|  | `research_and_analyst/` | Main package folder containing backend modules for analysis, agent orchestration, exception handling, logging, routing, and utility functions. |
+|  | `backend_server/` | FastAPI-based API server for deploying ARRGS services, integrated with LangGraph orchestration and REST endpoints. |
+|  | `router/` | Routing layer connecting API requests to the underlying analyst, retrieval, and report generation modules. |
+|  | `prompt_lib/` | Centralized repository of system and agent prompts (e.g., Analyst, Validator, Writer). |
+|  | `utils/` | Helper functions for data preprocessing, saving reports, and evaluation. |
+| **3. Notebook & Testing** | `notebook/test.ipynb` | Jupyter notebook for interactive testing of pipeline components, agent interactions, and report validation workflows. |
+| **4. Frontend & Visualization** | React-based UI (deployed separately) | Interactive frontend for inputting prompts, reviewing human validation feedback, and downloading final reports (React + Tailwind + ShadCN/UI). |
+| **5. Integration & Deployment** | FastAPI / Flask Backend | Backend service exposing ARRGS features as APIs for external use. |
+|  | Dockerfile & CI/CD (Azure / AWS EKS) | Cloud deployment-ready configurations for containerization and continuous integration. |
+|  | Vector DB Integration (FAISS / ChromaDB) | Supports retrieval-augmented research via vector-based semantic search. |
+| **6. LLMOps & Quality Control Tools** | `SonarQube` Integration | Static code analysis to ensure maintainability and code health. |
+|  | `Trivy` Integration | Vulnerability scanning of Docker images and dependencies. |
+|  | `Context Memory` Module | Persistent context tracking across sessions to maintain report coherence and human-in-loop feedback history. |
+| **7. Sample Outputs** | `sample_reports/` folder | Example generated reports in `.pdf`, `.docx`, and `.md` formats. Each report demonstrates ARRGS capabilities across different domains (e.g., pharma, finance, academia). |
+| **8. Evaluation Tools** | Static Code Analysis & Model Evaluation Scripts | Includes code for validating performance of retrievers, LLM outputs, and memory modules. |
+| **9. Environment & Configuration** | `pyproject.toml` | Complete dependency and build configuration file (supports editable installation). |
+|  | `.env` and `configuration.yml` | Environment variables and configuration parameters for deployment, API keys, and runtime control. |
+
+---
+
+### 🧩 Summary
+
+ARRGS provides:
+- A **modular, multi-agent LangGraph architecture**.
+- A **FastAPI backend** with React UI.
+- **Cloud-ready deployment** with Docker and Azure/AWS configurations.
+- **Robust LLMOps layer** (SonarQube, Trivy, Context Memory).
+- **Editable package setup** with reproducible environments (`uv`, `pyproject.toml`).
+- **End-to-end deliverables** including documentation, visual architecture, sample reports, and evaluation modules.
+
 
 ---
 
