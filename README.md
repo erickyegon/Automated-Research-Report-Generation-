@@ -14,7 +14,7 @@ Below is the detailed architecture diagram represented in **Mermaid**, showing h
 ```mermaid
 flowchart TD
 
-    %% Colors
+    %% ======= CLASS DEFINITIONS (COLORS) =======
     classDef startend fill:#a7f3d0,stroke:#065f46,stroke-width:2px;
     classDef analyst fill:#93c5fd,stroke:#1e3a8a,stroke-width:2px;
     classDef human fill:#fde68a,stroke:#92400e,stroke-width:2px;
@@ -26,41 +26,40 @@ flowchart TD
     classDef finalize fill:#fca5a5,stroke:#7f1d1d,stroke-width:2px;
     classDef ops fill:#f3f4f6,stroke:#1f2937,stroke-width:2px;
 
-    %% Nodes
-    A[Start / User Input]:::startend --> B[Analyst Agent\n(Domain-Specific Reasoning)]:::analyst
-    B --> C[Human-in-the-Loop Validation\n(Human Feedback & Approval)]:::human
-    C --> D[Generate Questions Node\n(Research Decomposition)]:::question
+    %% ======= MAIN WORKFLOW =======
+    A["Start / User Input"]:::startend --> B["Analyst Agent: Domain-Specific Reasoning"]:::analyst
+    B --> C["Human-in-the-Loop Validation: Human Feedback & Approval"]:::human
+    C --> D["Generate Questions Node: Research Decomposition"]:::question
     
-    D --> E1[Web Search API]:::retrieval
-    D --> E2[Wikipedia Retrieval]:::retrieval
-    D --> E3[Database Query]:::retrieval
-    D --> E4[Knowledge Base / Vector DB]:::retrieval
+    D --> E1["Web Search API"]:::retrieval
+    D --> E2["Wikipedia Retrieval"]:::retrieval
+    D --> E3["Database Query"]:::retrieval
+    D --> E4["Knowledge Base / Vector DB"]:::retrieval
 
-    E1 & E2 & E3 & E4 --> F[Answer Generation Node\n(Synthesize Multi-Source Insights)]:::answer
-    F --> G[Validation & Save Node\n(Integrity Check, Store to DB/S3)]:::validate
+    E1 & E2 & E3 & E4 --> F["Answer Generation Node: Synthesize Multi-Source Insights"]:::answer
+    F --> G["Validation & Save Node: Integrity Check, Store to DB/S3"]:::validate
     G -->|If Invalid| D
-    G --> H[Write Introduction Section]:::writing
-    G --> I[Write Analysis Section]:::writing
-    G --> J[Write Conclusion Section]:::writing
+    G --> H["Write Introduction Section"]:::writing
+    G --> I["Write Analysis Section"]:::writing
+    G --> J["Write Conclusion Section"]:::writing
 
-    H & I & J --> K[Finalization Node\n(Compile & Export DOCX/PDF/MD)]:::finalize
-    K --> L[End / Final Report Output]:::startend
+    H & I & J --> K["Finalization Node: Compile & Export DOCX/PDF/MD"]:::finalize
+    K --> L["End / Final Report Output"]:::startend
 
-    %% Ops Layer
-    subgraph O[Operational Layer]
+    %% ======= OPS LAYER =======
+    subgraph O["Operational Layer"]
         direction TB
-        O1[FastAPI / Flask Backend]
-        O2[React Frontend Interface]
-        O3[FAISS / ChromaDB Vector Store]
-        O4[Azure / AWS / Docker Deployment]
-        O5[SonarQube · Trivy · Context Memory]
+        O1["FastAPI / Flask Backend"]
+        O2["React Frontend Interface"]
+        O3["FAISS / ChromaDB Vector Store"]
+        O4["Azure / AWS / Docker Deployment"]
+        O5["SonarQube · Trivy · Context Memory"]
     end
     O:::ops
 
-    %% Positioning
+    %% ======= RELATION =======
     L -.-> O
 
-```
 
 ---
 
@@ -164,4 +163,5 @@ Global Director of Performance, Evidence & Insights | AI & Data Science Leader
 ---
 
 © 2025 Erick Kiprotich Yegon | AI Systems Portfolio | All Rights Reserved.
+
 
