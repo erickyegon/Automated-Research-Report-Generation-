@@ -1,13 +1,14 @@
 [build-system]
-requires = ["setuptools>=68"]         # PEP 660 editable support ke liye naya setuptools
+requires = ["setuptools>=68"]         # Supports PEP 660 editable installs
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "automated-research-report-generation"
 version = "0.1.0"
-description = "Add your description here"
+description = "Automated Research and Report Generation System (ARRGS): A multi-agent LLMOps framework for AI-driven research, analysis, and report creation."
 readme = "README.md"
 requires-python = ">=3.11"
+
 dependencies = [
     "ipykernel>=6.30.1",
     "langchain-community>=0.3.30",
@@ -21,8 +22,7 @@ dependencies = [
     "wikipedia>=1.4.0",
 ]
 
-# Optional: authors, license
-authors = [{ name = "Dr. Erick K. Yegon" }]
+authors = [{ name = "Dr. Erick K. Yegon", email = "erickkiprotichyegon61@gmail.com" }]
 license = { text = "Proprietary" }
 
 [tool.setuptools.packages.find]
